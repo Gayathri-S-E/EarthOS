@@ -1,0 +1,22 @@
+# Demo script for EarthOS — The Decision Brain for a Living Planet.
+# Each turn is typed into the demo UI. `narrate` lines describe what the operator sees;
+# make_video.py appends the actual Decider verdict so the narration is always honest.
+title: "EarthOS: Decision Brain for a Living Planet"
+pitch: "EarthOS uses Strands Decider 2B to route each planetary emergency to the right investigation, then Amazon Bedrock writes the action brief."
+features:
+  - "reads a plain-language scenario from the operator"
+  - "Strands Decider 2B routes to the right specialist tool in one forward pass per step"
+  - "iterative investigation loop: heat, water, energy, and data-quality probes"
+  - "Amazon Bedrock synthesises gathered evidence into a prioritised action brief"
+  - "live decision panel shows tool probabilities, confidence, and alternatives for every step"
+eager: false
+intro: "EarthOS is an AI planetary-emergency analyst. Strands Decider 2B picks the right investigation tool at each step, the tool gathers evidence, and Amazon Bedrock synthesises it into an action brief."
+intro_normal: "EarthOS runs on Amazon Bedrock AgentCore Runtime. Strands Decider 2B routes each investigation step; Amazon Bedrock writes the action brief."
+turns:
+  - say: "Declare a heat emergency for Phoenix Metro. People are collapsing from heat exhaustion and cooling centres are overwhelmed. Scenario: urban_heatwave"
+    narrate: "The operator reports an urban heatwave. The decider must route to the heat and cooling risk tool."
+  - say: "Chennai Metro is running out of water. Day Zero is less than two months away and 3.8 million people are at risk. Scenario: water_shortage"
+    narrate: "A water-shortage scenario — the decider switches to the water-reserves probe."
+  - say: "The UK national grid has a 6.6 GW supply deficit. Renewable output is critically low and rolling blackouts are imminent. Scenario: renewable_energy_gap"
+    narrate: "A renewable-energy gap — the decider routes to the energy-capacity investigation."
+outro: "Three different crises, three correct tool selections, one forward pass each — and Amazon Bedrock for the action brief. EarthOS built with the AWS User Group Madurai Strands Decider hackathon kit."
